@@ -40,13 +40,13 @@ git config --local user.email 'DEINE GITHUB-NO-REPLY-ADRESSE'
 Dateien gezielt vormerken, dann den vollständigen Inhalt kontrollieren:
 
 ```powershell
-git add -- .gitignore .gitattributes nc-userkontenverwaltung.ps1 README.md users.example.csv PRUEFBERICHT.md LIZENZOPTIONEN.md VEROEFFENTLICHEN.md LICENSE
+git add -- .gitignore .gitattributes nc-userkontenverwaltung.ps1 _START_nc-userkontenverwaltung-starten.vbs README.md users.example.csv PRUEFBERICHT.md LIZENZOPTIONEN.md VEROEFFENTLICHEN.md LICENSE
 git diff --cached --name-only
 git diff --cached --check
 git diff --cached
 ```
 
-Es dürfen ausschließlich die neun genannten Projektdateien erscheinen. Jede Datei inhaltlich prüfen, insbesondere Kommentare und Beispiele. Anschließend lokal speichern:
+Es dürfen ausschließlich die zehn genannten Projektdateien erscheinen. Jede Datei inhaltlich prüfen, insbesondere Kommentare und Beispiele. Anschließend lokal speichern:
 
 ```powershell
 git commit -m 'Erste dokumentierte Fassung der Nextcloud-Benutzerverwaltung'

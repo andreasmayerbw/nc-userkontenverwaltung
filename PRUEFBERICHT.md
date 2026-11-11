@@ -55,6 +55,18 @@ Zusätzlich: Syntaxprüfung der geänderten Fassung unter Windows PowerShell 5.1
 
 Die spätere Lizenzergänzung verändert ausschließlich Kommentare im Skript sowie die Dokumentation; der ausführbare Skriptinhalt stimmt mit der zuvor geprüften Fassung überein. Die Syntax wird erneut geprüft.
 
+## Ergänzte VBS-Startdatei
+
+Die vom Nutzer nachgereichte `_START_nc-userkontenverwaltung-starten.vbs` wurde vollständig gelesen und unverändert übernommen. Sie enthält keine fest eingetragenen Zugangsdaten, Instanzadressen oder persönlichen Pfade. Sie ermittelt ihren eigenen Ordner, prüft die Existenz von `nc-userkontenverwaltung.ps1` und setzt dessen Pfad in Anführungszeichen. Anschließend startet sie Windows PowerShell ohne Profil und ohne sichtbares Konsolenfenster.
+
+Der bereits vorhandene Parameter `-ExecutionPolicy Bypass` betrifft den gestarteten Prozess und ändert keine dauerhaft gespeicherte Richtlinie. Gruppenrichtlinien haben Vorrang. Der Aufruf wurde dokumentiert, aber nicht ausgeführt. Die Sichtprüfung ist kein vollständiger Starttest. VBScript und Windows Script Host müssen verfügbar sein. Weil `shell.Run` nicht wartet und die Konsole verborgen bleibt, werden spätere PowerShell-Fehler nicht vom Starter angezeigt; die README enthält deshalb zusätzlich den sichtbaren Konsolenstart zur Fehlersuche.
+
+SHA-256 der unveränderten nachgereichten Startdatei:
+
+```text
+38D9BEC850401DC0C19D46872BEBAB00F81F39C25D509A000EEE001F02FA4F66
+```
+
 ## Dateistände
 
 SHA-256 des ursprünglichen Uploads:

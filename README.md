@@ -35,13 +35,19 @@ Passwörter und Sprache bestehender Konten werden durch den Bestandsabgleich nic
 - Eine gültige HTTPS-Adresse und ein vertrauenswürdiges Serverzertifikat.
 - Schreibrechte im Skriptordner für Einstellungen, Protokolle und Ausgaben. Lokale Windows-Administratorrechte werden vom Skript nicht vorausgesetzt.
 
-Im entpackten Projektordner starten:
+**Start per Doppelklick:** Im entpackten Projektordner die Datei [_START_nc-userkontenverwaltung-starten.vbs](_START_nc-userkontenverwaltung-starten.vbs) öffnen. Sie muss im selben Ordner wie `nc-userkontenverwaltung.ps1` liegen. Die Startdatei öffnet die Anwendung ohne zusätzliches PowerShell-Konsolenfenster und meldet eine fehlende PS1-Datei.
+
+Die Startdatei verwendet `-ExecutionPolicy Bypass` für den gestarteten PowerShell-Prozess. Sie ändert die dauerhaft gespeicherte Ausführungsrichtlinie nicht; übergeordnete Gruppenrichtlinien bleiben maßgeblich. Ihre Verwendung muss zu den örtlichen Vorgaben passen. Weitere Voraussetzungen sind ein verfügbarer Windows Script Host und VBScript-Unterstützung. [Microsoft: Ausführungsrichtlinien](https://learn.microsoft.com/de-de/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-5.1)
+
+**Alternativ oder zur Fehlersuche:** PowerShell im entpackten Projektordner öffnen und ausführen:
 
 ```powershell
 powershell.exe -NoProfile -STA -File .\nc-userkontenverwaltung.ps1
 ```
 
 Bei einer Ausführungssperre gelten die lokalen beziehungsweise organisatorischen Vorgaben für PowerShell-Skripte. Eine generelle Abschaltung der Ausführungsrichtlinie ist nicht erforderlich.
+
+Wenn beim Doppelklick kein Fenster erscheint, den obigen Konsolenstart zur Anzeige von Fehlermeldungen verwenden. Die Startdatei wartet nicht auf das Ende des PowerShell-Prozesses und zeigt dessen Laufzeitfehler nicht selbst an.
 
 ## CSV-Format
 
