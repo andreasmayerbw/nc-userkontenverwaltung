@@ -1,0 +1,33 @@
+# Betriebsdaten mit Konten, Passwörtern oder Instanzangaben
+output/
+logs/
+*.settings.json
+*.csv
+!/users.example.csv
+*.txt
+!LICENSE.txt
+!NOTICE.txt
+*.log
+*.xml
+
+# Zugangsdaten, Umgebungen und Schlüssel
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.credentials.json
+
+# Sicherungen, Archive und lokale Arbeitsdateien
+*.bak
+*.backup
+*.old
+*.tmp
+*.zip
+*~
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
