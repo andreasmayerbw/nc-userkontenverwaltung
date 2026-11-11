@@ -1,0 +1,2 @@
+﻿username;displayname;password;email;groups;subadmin;quota
+demo01;Beispielkonto;;demo01@example.invalid;demogruppe;;1GB
